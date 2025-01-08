@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  standalone: true,
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css'],
+  imports: [RouterModule] // Importa RouterModule para que routerLink funcione
 })
-export class LoginComponent {
-}
+export class LoginComponent { }

@@ -1,32 +1,46 @@
 <head>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
+
 <body>
     <div class="container">
         <div class="container-form">
             <form class="sign-up">
-                <h2>registrarse</h2>
+                <h2>Registrarse</h2>
                 <div class="social-networks">
                     <i class="uil uil-twitter"></i>
                     <i class="uil uil-instagram"></i>
                     <i class="uil uil-youtube"></i>
                     <i class="uil uil-whatsapp"></i>
                 </div>
-                <span>Use su correo electronico para registrarse</span>
                 <div class="container-input">
                     <i class="uil uil-user"></i>
                     <input type="text" placeholder="Nombre">
                 </div>
                 <div class="container-input">
                     <i class="uil uil-envelope"></i>
-                    <input type="text" placeholder="Email">
+                    <input type="email" placeholder="Email">
                 </div>
                 <div class="container-input">
                     <i class="uil uil-lock"></i>
                     <input type="password" placeholder="Password">
                 </div>
+                <!-- Nuevo campo para teléfono -->
+                <div class="container-input">
+                    <i class="uil uil-phone"></i>
+                    <input type="tel" placeholder="Número de teléfono">
+                </div>
+                <!-- Nuevo campo para dirección -->
+                <div class="container-input">
+                    <i class="uil uil-map-marker-alt"></i>
+                    <input type="text" placeholder="Dirección">
+                </div>
                 <div class="container-btn">
-                    <button class="button">REGISTRARSE</button>
+                    <button class="button" type="submit">REGISTRARSE</button>
+                </div>
+                <div class="container-btn">
+                    <!-- Botón para navegar a login -->
+                    <button class="button" type="button" routerLink="/login">IR A INICIAR SESIÓN</button>
                 </div>
             </form>
         </div>

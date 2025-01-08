@@ -1,42 +1,38 @@
-<head>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-</head>
 <body>
-    
     <div class="container">
         <div class="content">
             <div class="left">
                 <h2>Cajas</h2>
                 <div class="cards-container">
-                    <div class="card">
+                    <div *ngFor="let caja of cajas; let i = index" class="card" (click)="viewBoxInfo(caja.id)">
                         <div class="card-image">
-                            <img src="https://cdn-icons-png.flaticon.com/512/5532/5532157.png" alt="Caja Imagen">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5532/5532157.png" alt="Caja Imagen">
                         </div>
-                        <div class="card-text">Caja 1</div> <!-- Texto debajo de la tarjeta con la imagen -->
-                    </div>
-                    <div class="card">
-                        <div class="card-plus">+</div>
-                        <div class="card-text">Añadir Caja</div> <!-- Texto debajo de la tarjeta con el signo "+" -->
-                    </div>
+                        <div class="card-text">{{ caja.nombre }}</div> <!-- Nombre de la Caja -->
+                      </div>
+                      
+                </div>
+                <div class="card" (click)="addCaja()">
+                    <div class="card-plus">+</div>
+                    <div class="card-text">Añadir Caja</div>
                 </div>
             </div>
             <div class="right">
-                <!-- Sección de Usuario -->
-                <div class="section usuario">
-                    <h3 class="usuario-title">Usuario</h3> <!-- Título de Usuario -->
-                    <div class="profile-image"></div> <!-- Círculo para Usuario -->
+                <div class="section usuario" (click)="goToUserInterface()">
+                    <h3 class="usuario-title">Usuario</h3>
+                    <div class="profile-image"></div>
                     <div class="user-details">
                         <p><strong>Nombre:</strong></p>
                         <p><strong>Número de cajas:</strong></p>
                         <p><strong>Suscripción:</strong></p>
                     </div>
                 </div>
-                <!-- Sección de Chatbot -->
-                <div class="section chatbot">
-                    <h3 class="chatbot-title">Chatbot</h3> <!-- Título de Chatbot -->
-                    <div class="chatbot-image"></div> <!-- Rectángulo para Chatbot -->
+                <div class="section chatbot" (click)="goToChatbot()">
+                    <h3 class="chatbot-title">Chatbot</h3>
+                    <div class="chatbot-image"></div>
                     <div class="chatbot-text">
-                        <p><strong>Utiliza este ChatBot para resolver tus dudas o pedir ayuda a ApiBot si lo necesitas</strong></p>
+                        <p><strong>Utiliza este ChatBot para resolver tus dudas o pedir ayuda a ApiBot si lo
+                                necesitas</strong></p>
                     </div>
                 </div>
             </div>

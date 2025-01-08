@@ -118,3 +118,21 @@ body {
         opacity: 1;
     }
 }
+
+.regresar-sidebar {
+    display: block;
+    padding: 10px 20px;
+    background-color: #ffd000;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.regresar-sidebar:hover {
+    background-color: #f0c400;
+    cursor: pointer;
+}

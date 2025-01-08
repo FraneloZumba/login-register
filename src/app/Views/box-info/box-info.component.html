@@ -1,12 +1,11 @@
 <head>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
+
 <body>
     <div class="container">
-        <!-- Título superior -->
-        <div class="title">Datos Caja #</div>
-        
-        <button class="back-button">← Regresar</button>
+        <div class="title">Datos Caja #{{ cajaId }}</div>
+        <button class="back-button" (click)="goBack()">← Regresar</button>
         <div class="sections">
             <div class="section">
                 <i class="uil uil-temperature-half"></i>

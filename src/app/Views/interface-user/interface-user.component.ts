@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';  // Importa RouterLink
 
 @Component({
   selector: 'app-interface-user',
-  imports: [],
+  standalone: true,  // Indica que es un componente standalone
+  imports: [RouterLink],  // Asegúrate de importar RouterLink
   templateUrl: './interface-user.component.html',
-  styleUrl: './interface-user.component.css'
+  styleUrls: ['./interface-user.component.css']
 })
-export class InterfaceUserComponent {
-
-}
+export class InterfaceUserComponent { }
