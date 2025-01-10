@@ -10,7 +10,6 @@
                         </div>
                         <div class="card-text">{{ caja.nombre }}</div> <!-- Nombre de la Caja -->
                       </div>
-                      
                 </div>
                 <div class="card" (click)="addCaja()">
                     <div class="card-plus">+</div>
@@ -20,16 +19,20 @@
             <div class="right">
                 <div class="section usuario" (click)="goToUserInterface()">
                     <h3 class="usuario-title">Usuario</h3>
-                    <div class="profile-image"></div>
+                    <div class="profile-image">
+                        <img class="profile-image" src="assets/images/miimagen.jpg" alt="Descripción">
+                    </div>
                     <div class="user-details">
-                        <p><strong>Nombre:</strong></p>
-                        <p><strong>Número de cajas:</strong></p>
-                        <p><strong>Suscripción:</strong></p>
+                        <p><strong>Nombre:</strong> Fran Zumba</p>
+                        <p><strong>Número de cajas:</strong> 1</p>
+                        <p><strong>Suscripción:</strong> Premium</p>
                     </div>
                 </div>
                 <div class="section chatbot" (click)="goToChatbot()">
                     <h3 class="chatbot-title">Chatbot</h3>
-                    <div class="chatbot-image"></div>
+                    <div class="chatbot-image">
+                        <img class="chatbot-image" alt="Imagen de un chatbot con forma de abeja robot" height="100" src="https://storage.googleapis.com/a1aa/image/xJif4Yx410SJMqZoKZqoRcYZPUcfxF8XpZLeGCo2E9TK9GHoA.jpg" width="100"/>
+                    </div>
                     <div class="chatbot-text">
                         <p><strong>Utiliza este ChatBot para resolver tus dudas o pedir ayuda a ApiBot si lo
                                 necesitas</strong></p>

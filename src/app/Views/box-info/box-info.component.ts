@@ -23,7 +23,22 @@ export class BoxInfoComponent implements OnInit {
     });
   }
 
-  // Método para regresar a la página de Selector
+  goToTemperatureInterface() {
+    this.router.navigate(['/temperature']);  // Navegar a la página de la interfaz de usuario
+  }
+
+  goToCamerasInterface() {
+    this.router.navigate(['/cameras']);  // Navegar a la página de cámaras
+  }
+  
+  goToHumidityInterface() {
+    this.router.navigate(['/humidity']);  // Navegar a la página de humedad
+  }
+  
+  goToWeightInterface() {
+    this.router.navigate(['/weight']);  // Navegar a la página de peso
+  }  
+
   goBack(): void {
     this.router.navigate(['/selector']);  // Ahora se usa correctamente 'this.router'
   }

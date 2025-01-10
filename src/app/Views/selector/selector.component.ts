@@ -11,7 +11,8 @@ import { Router } from '@angular/router';  // Importar Router
 })
 export class SelectorComponent {
 
-  cajas: any[] = [];
+  cajas: any[] = [{ id: 1, nombre: 'Caja 1' }];
+  
 
   constructor(private router: Router) {}  // Inyectamos el router en el constructor
 

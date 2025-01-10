@@ -7,21 +7,21 @@
         <div class="title">Datos Caja #{{ cajaId }}</div>
         <button class="back-button" (click)="goBack()">← Regresar</button>
         <div class="sections">
-            <div class="section">
+            <div class="section" (click)="goToTemperatureInterface()">
                 <i class="uil uil-temperature-half"></i>
-                <div class="text">Temperatura</div>
+                <div class="text" (click)="goToTemperatureInterface()">Temperatura</div>
             </div>
-            <div class="section">
+            <div class="section" (click)="goToHumidityInterface()">
                 <i class="uil uil-tear"></i>
-                <div class="text">Humedad</div>
+                <div class="text" (click)="goToHumidityInterface()">Humedad</div>
             </div>
-            <div class="section">
+            <div class="section" (click)="goToWeightInterface()">
                 <i class="uil uil-balance-scale"></i>
-                <div class="text">Peso</div>
+                <div class="text" (click)="goToWeightInterface()">Peso</div>
             </div>
-            <div class="section">
+            <div class="section" (click)="goToCamerasInterface()">
                 <i class="uil uil-camera"></i>
-                <div class="text">Cámaras</div>
+                <div class="text" (click)="goToCamerasInterface()">Cámaras</div>
             </div>
         </div>
     </div>

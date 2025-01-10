@@ -95,25 +95,34 @@ body{
     margin-bottom: 20px;
     margin-top: 5px;
 }
+
+.social-networks i:hover{
+    background-color: #ffd000;
+    color: white;
+}
+
 .container-btn {
     display: flex;
-    gap: 10px; /* Espacio entre los botones */
+    gap: 20px; /* Espacio entre los botones */
+    justify-content: center; /* Centra los botones */
 }
-.button{
+
+.button {
     transition: background-color 0.3s ease, color 0.3s ease;
     width: 170px;
     height: 45px;
     font-size: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Bordes redondeados para un estilo más moderno */
     cursor: pointer;
     margin-top: 10px;
     background-color: #ffd000;
+    font-weight: bold; /* Texto en negrita para los botones */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: all 0.3s ease;
 }
-.button:hover{
+
+.button:hover {
     background-color: #d1ab00;
-}
-.social-networks i:hover{
-    background-color: #ffd000;
-    color: white;
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
 }

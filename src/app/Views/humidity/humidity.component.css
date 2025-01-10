@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 950px;
+    height: 600px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.637);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+    /* No animación en el contenedor principal */
+}
+
+/* Nueva animación: slide-fade */
+@keyframes slide-fade {
+    0% {
+        transform: translateX(100%); /* Comienza desde fuera del lado derecho del contenedor */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(10%); /* Acercándose */
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0); /* Posición final */
+        opacity: 1;
+    }
+}
+
+/* Header con botones */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    animation: slide-fade 0.7s ease-out forwards; /* Animación solo en el contenido */
+}
+
+.header h2 {
+    text-align: center;
+    flex-grow: 1;
+    animation: slide-fade 0.7s ease-out forwards; /* Animación solo en el contenido */
+}
+
+/* Botón regresar */
+.back-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: slide-fade 0.7s ease-out forwards; /* Animación solo en el contenido */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de ayuda */
+.help-button-container {
+    display: flex;
+    align-items: center;
+    animation: slide-fade 0.7s ease-out forwards; /* Animación solo en el contenido */
+}
+
+.help-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.help-button:hover {
+    background-color: #0056b3;
+}
+
+/* Tooltip */
+.tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.help-button-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Secciones */
+.upper-section, .lower-section {
+    display: flex;
+    align-items: center;
+    width: 65%;
+    height: 50%;
+    margin-left: auto;
+    background-color: #f7f9fc;
+    border-radius: 20px;
+    border: 1px solid rgb(199, 199, 199);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.747);
+    padding: 20px;
+    position: relative;
+    animation: slide-fade 0.7s ease-out forwards; /* Animación solo en el contenido */
+}
+
+.upper-section {
+    width: 100%;
+}
+
+.lower-section {
+    background-color: #eef2f5;
+    justify-content: center;
+}
+
+/* Controles a la izquierda (fuera del contenedor de contenido) */
+.left-controls {
+    position: absolute;
+    left: -245px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Selector */
+.selector {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.selector:hover {
+    border-color: #bbb;
+}
+
+/* Botón */
+.load-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #ffd000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.load-button:hover {
+    background-color: #977b00;
+}
+
+/* Contenido */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h2 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Textos */
+.upper-section h2, .lower-section h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.tittle {
+    text-align: center;
+    color: #333;
+    animation: slide-fade 0.7s ease-out forwards; /* Animación solo en el contenido */
+}

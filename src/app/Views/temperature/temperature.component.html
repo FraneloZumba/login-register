@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-button" (click)="goBack()">Regresar</button>
+            <h2 class="tittle"> <i class="uil uil-temperature-half"></i> Temperatura tiempo real</h2>
+            <div class="help-button-container">
+                <span class="tooltip">¿Necesitas ayuda?</span> <!-- Ahora está aquí al lado izquierdo -->
+                <button class="help-button">?</button>
+            </div>
+        </div>
+
+        <div class="upper-section">
+            <h2>Temperatura</h2><!-- Aquí reemplazas por la gráfica de la temperatura en tiempo real -->
+        </div>
+        
+        <h2 class="tittle"> <i class="uil uil-temperature-half"></i> Temperatura a tiempo definido</h2>
+        
+        <div class="lower-section">
+            <div class="left-controls">
+                <select class="selector">
+                    <option value="3-dias">3 días</option>
+                    <option value="2-semanas">2 semanas</option>
+                    <option value="3-meses">3 meses</option>
+                </select>
+                <button class="load-button">Cargar</button>
+            </div>
+            <div class="content">
+                <h2>Temperatura</h2><!-- Aquí reemplazas por la gráfica de la temperatura a tiempo definido -->
+            </div>
+        </div>
+    </div>
+</body>

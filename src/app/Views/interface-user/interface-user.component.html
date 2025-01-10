@@ -1,36 +1,70 @@
-<body>
+<head>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  </head>
+  <body>
     <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="#usuario">Usuario</a></li>
-                <li><a href="#configuracion">Configuración</a></li>
-                <li><a href="#acerca-de">Acerca de</a></li>
-                <li><a href="#contactos">Contactos</a></li>
-                <li><a routerLink="/selector" class="regresar-sidebar">Regresar</a></li> <!-- Usar routerLink para navegar -->
-            </ul>
+      <div class="sidebar">
+        <ul>
+          <li><a href="#" (click)="setActiveSection('usuario')"> <i class="uil uil-user"></i> Usuario</a></li>
+          <li><a href="#" (click)="setActiveSection('configuracion')"> <i class="uil uil-setting"></i> Configuración</a></li>
+          <li><a href="#" (click)="setActiveSection('acerca-de')"> <i class="uil uil-exclamation-circle"></i> Acerca de</a></li>
+          <li><a href="#" (click)="setActiveSection('contactos')"> <i class="uil uil-phone"></i> Contactos</a></li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="btn-regresar" routerLink="/selector" >Regresar</button>
         </div>
-        <div class="main-content">
-            <div id="usuario" class="section">
-                <div class="user-info">
-                    <div class="user-photo-container">
-                        <div class="user-photo"></div>
-                    </div>
-                    <div class="user-details">
-                        <h2>Francisco Zumba</h2>
-                        <p>Correo: rafrazumbagmail.com</p>
-                        <p>Dirección: Ricaurte Barrio la Unión</p>
-                    </div>
-                </div>
+      </div>
+      <div class="main-content">
+        <div *ngIf="activeSection === 'usuario'" class="section">
+          <div class="user-info">
+            <div class="user-photo-container">
+              <img class="profile-image" src="assets/images/miimagen.jpg" alt="Descripción">
+            </div>        
+            <div class="user-details">
+              <h2>Usuario</h2>
+              <p><b>Correo:</b> rafrazumba&#64;gmail.com</p>
+              <p><b>Dirección:</b> No seas sapo</p>
+              <p><b>Número:</b> Primero un café ¿no?</p>
+              <p><b>Instagram:</b> &#64;frxnelo</p>
+              <p><b>Suscripción:</b> Premium</p>
             </div>
-            <div id="configuracion" class="section">
-                <h2>Configuración</h2>
-            </div>
-            <div id="acerca-de" class="section">
-                <h2>Acerca de</h2>
-            </div>
-            <div id="contactos" class="section">
-                <h2>Contactos</h2>
-            </div>
+          </div>
         </div>
+  
+        <!-- Bloque de editar datos fuera del bloque de datos del usuario -->
+        <div *ngIf="activeSection === 'usuario'" class="user-edit">
+          <h2>Editar Datos</h2>
+          <form>
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" placeholder="usuario123@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="direccion">Dirección</label>
+              <input type="text" id="direccion" placeholder="Calle 1 y Calle 2, 99">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="text" id="telefono" placeholder="0988746769">
+            </div>
+            <div class="button-container">
+              <button class="btn-save">Guardar Cambios</button>
+              <button class="btn-logout">Cerrar Sesión</button>
+          </div>
+          </form>
+        </div>
+        <div *ngIf="activeSection === 'configuracion'" class="section">
+          <h2>Configuración</h2>
+          <p>Esta función estará displonible en otro momento. :/</p>
+        </div>
+        <div *ngIf="activeSection === 'acerca-de'" class="section">
+          <h2>Acerca de</h2>
+          <p>Aqui conocerás mas sobre nuestra empresa HoneyTech.</p>
+        </div>
+        <div *ngIf="activeSection === 'contactos'" class="section">
+          <h2>Contactos</h2>
+          <p>Contacta a nuestros desarrolladores.</p>
+        </div>
+      </div>
     </div>
-</body>
+  </body>

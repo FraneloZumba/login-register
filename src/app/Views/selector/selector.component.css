@@ -70,6 +70,9 @@ body {
     position: relative;
     z-index: 10;
 }
+.cards-container .card {
+    margin-bottom: 20px; /* Espacio entre las tarjetas de las cajas */
+}
 .right {
     flex: 2;
     display: flex;
@@ -132,7 +135,7 @@ body {
 }
 /* Estilos para el rectángulo de chatbot */
 .chatbot-image {
-    width: 250px; /* Tamaño más pequeño */
+    width: 150px; /* Tamaño más pequeño */
     height: 150px; /* Tamaño más pequeño */
     border-radius: 15px; /* Bordes redondeados */
     background-color: #c0c0c0; /* Placeholder para la imagen */

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 950px;
+    height: 600px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.637);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Estilo de la animación slide-fade */
+@keyframes slide-fade {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(10%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo para el título */
+.title {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 20px;
+    animation: slide-fade 0.7s ease-out forwards;
+}
+
+/* Botón Regresar (parte superior izquierda) */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor del botón de ayuda (parte superior derecha) */
+.help-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    animation: slide-fade 0.7s ease-out forwards;
+}
+
+/* Estilo del botón de ayuda */
+.help-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.help-button:hover {
+    background-color: #0056b3;
+}
+
+/* Mini etiqueta de ayuda */
+.tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+/* Mostrar la mini etiqueta cuando el mouse pase sobre el botón de ayuda */
+.help-button-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Contenedor de las dos secciones */
+.sections-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Divide el espacio de forma equitativa */
+    gap: 10px;
+    margin-top: 30px;
+    animation: slide-fade 0.7s ease-out forwards;
+}
+
+/* Estilo común para las secciones */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; /* Cada sección ocupará el 48% del ancho */
+    height: 450px;
+    padding: 10px;
+    background-color: #f7f9fc;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.822);
+}
+
+/* Título dentro de cada sección */
+.section h3 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Contenedor del espacio para la cámara (gris) */
+.camera-space {
+    width: 100%; /* Ocupa todo el ancho de la sección */
+    height: 90%; /* Ajusta la altura según necesites (80% del alto de la sección) */
+    background-color: #444444; /* Fondo gris */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior dentro de cada sección */
+}
+
+.camera-space i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem; /* Ajusta este valor para cambiar el tamaño del icono */
+    height: 100%; /* Para ocupar todo el espacio vertical del contenedor */
+}
