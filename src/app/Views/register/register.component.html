@@ -3,7 +3,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" *ngIf="isLoaded; else loading">
         <div class="container-form">
             <form class="sign-up">
                 <h2>Registrarse en HoneyTech</h2>
@@ -25,12 +25,10 @@
                     <i class="uil uil-lock"></i>
                     <input type="password" placeholder="Password">
                 </div>
-                <!-- Nuevo campo para teléfono -->
                 <div class="container-input">
                     <i class="uil uil-phone"></i>
                     <input type="tel" placeholder="Número de teléfono">
                 </div>
-                <!-- Nuevo campo para dirección -->
                 <div class="container-input">
                     <i class="uil uil-map-marker-alt"></i>
                     <input type="text" placeholder="Dirección">
@@ -39,10 +37,15 @@
                     <button class="button" type="submit">REGISTRARSE</button>
                 </div>
                 <div class="container-btn">
-                    <!-- Botón para navegar a login -->
                     <button class="button" type="button" routerLink="/login">IR A INICIAR SESIÓN</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <ng-template #loading>
+        <div class="loading-container">
+            <p>Cargando...</p>
+        </div>
+    </ng-template>
 </body>

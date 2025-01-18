@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';  // Importar Router
 
@@ -9,12 +9,19 @@ import { Router } from '@angular/router';  // Importar Router
   templateUrl: './selector.component.html',
   styleUrls: ['./selector.component.css']
 })
-export class SelectorComponent {
+export class SelectorComponent implements OnInit {
 
   cajas: any[] = [{ id: 1, nombre: 'Caja 1' }];
-  
+  isLoaded: boolean = false; // Bandera para controlar la carga
 
   constructor(private router: Router) {}  // Inyectamos el router en el constructor
+
+  ngOnInit(): void {
+    // Simula una breve espera para marcar como cargado
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 2000); // Ajusta el tiempo según sea necesario
+  }
 
   // Método para añadir una nueva caja
   addCaja() {

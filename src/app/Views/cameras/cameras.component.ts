@@ -12,12 +12,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CamerasComponent {
   cajaId: string | null = '';
+  isLoaded: boolean = false; // Bandera para controlar la carga
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     // Obtener el id de la URL
     this.cajaId = this.route.snapshot.paramMap.get('id');
+
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 200);
   }
 
   goBack(): void {

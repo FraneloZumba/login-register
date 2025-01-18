@@ -2,18 +2,19 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
-    <div class="container">
+    <div *ngIf="isLoaded; else loading" class="container">
         <div class="header">
             <button class="back-button" (click)="goBack()">Regresar</button>
             <h2 class="tittle"> <i class="uil uil-tear"></i> Humedad tiempo real</h2>
             <div class="help-button-container">
-                <span class="tooltip">¿Necesitas ayuda?</span> <!-- Ahora está aquí al lado izquierdo -->
+                <span class="tooltip">¿Necesitas ayuda?</span>
                 <button class="help-button">?</button>
             </div>
         </div>
 
         <div class="upper-section">
-            <h2>Humedad</h2><!-- Aquí reemplazas por la gráfica de la temperatura en tiempo real -->
+            <h2>Humedad</h2>
+            <!-- Aquí reemplazas por la gráfica de la temperatura en tiempo real -->
         </div>
         
         <h2 class="tittle"> <i class="uil uil-tear"></i> Humedad a tiempo definido</h2>
@@ -28,8 +29,14 @@
                 <button class="load-button">Cargar</button>
             </div>
             <div class="content">
-                <h2>Humedad</h2><!-- Aquí reemplazas por la gráfica de la temperatura a tiempo definido -->
+                <h2>Humedad</h2>
+                <!-- Aquí reemplazas por la gráfica de la temperatura a tiempo definido -->
             </div>
         </div>
     </div>
+
+    <!-- Loading Spinner -->
+    <ng-template #loading>
+        <div class="loading-spinner">Cargando...</div>
+    </ng-template>
 </body>

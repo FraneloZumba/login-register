@@ -1,5 +1,10 @@
+<head>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+</head>
+
 <body>
-    <div class="container">
+    <!-- Mostrar el contenido solo si isLoaded es true -->
+    <div *ngIf="isLoaded; else loading" class="container">
         <div class="content">
             <div class="left">
                 <h2>Cajas</h2>
@@ -8,8 +13,8 @@
                         <div class="card-image">
                           <img src="https://cdn-icons-png.flaticon.com/512/5532/5532157.png" alt="Caja Imagen">
                         </div>
-                        <div class="card-text">{{ caja.nombre }}</div> <!-- Nombre de la Caja -->
-                      </div>
+                        <div class="card-text">{{ caja.nombre }}</div>
+                    </div>
                 </div>
                 <div class="card" (click)="addCaja()">
                     <div class="card-plus">+</div>
@@ -24,7 +29,7 @@
                     </div>
                     <div class="user-details">
                         <p><strong>Nombre:</strong> Fran Zumba</p>
-                        <p><strong>Número de cajas:</strong> 1</p>
+                        <p><strong>Número de cajas:</strong> {{ cajas.length }}</p>
                         <p><strong>Suscripción:</strong> Premium</p>
                     </div>
                 </div>
@@ -34,11 +39,17 @@
                         <img class="chatbot-image" alt="Imagen de un chatbot con forma de abeja robot" height="100" src="https://storage.googleapis.com/a1aa/image/xJif4Yx410SJMqZoKZqoRcYZPUcfxF8XpZLeGCo2E9TK9GHoA.jpg" width="100"/>
                     </div>
                     <div class="chatbot-text">
-                        <p><strong>Utiliza este ChatBot para resolver tus dudas o pedir ayuda a ApiBot si lo
-                                necesitas</strong></p>
+                        <p><strong>Utiliza este ChatBot para resolver tus dudas o pedir ayuda a ApiBot si lo necesitas</strong></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Mostrar un mensaje de carga mientras isLoaded es false -->
+    <ng-template #loading>
+        <div class="loading-container">
+            <p>Cargando...</p>
+        </div>
+    </ng-template>
 </body>

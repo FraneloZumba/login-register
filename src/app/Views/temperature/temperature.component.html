@@ -2,7 +2,8 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Mostrar el contenido solo si isLoaded es true -->
+    <div *ngIf="isLoaded; else loading" class="container">
         <div class="header">
             <button class="back-button" (click)="goBack()">Regresar</button>
             <h2 class="tittle"> <i class="uil uil-temperature-half"></i> Temperatura tiempo real</h2>
@@ -32,4 +33,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Mostrar un mensaje de carga mientras isLoaded es false -->
+    <ng-template #loading>
+        <div class="loading-container">
+            <p>Cargando...</p>
+        </div>
+    </ng-template>
 </body>
